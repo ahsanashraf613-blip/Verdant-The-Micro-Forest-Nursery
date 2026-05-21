@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Impact Dashboard – CO₂ & Biodiversity | Verdant</title>
+    <meta name="description" content="Real-time aggregated data from 12,000+ micro-forests: CO₂ sequestered, stormwater filtered, pollinator visits. Updated daily.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌿 VERDANT</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="science.html">The Science</a></li>
+                <li><a href="impact.html" class="active">Impact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <h1>Your impact. Measured.</h1>
+            <p>Every hour, these numbers grow.</p>
+        </section>
+
+        <section class="live-counters scroll-reveal">
+            <div class="counter-grid">
+                <div class="counter-card"><span id="forests-count">12487</span><br>micro‑forests planted</div>
+                <div class="counter-card"><span id="co2-count">892.4</span><br>metric tons CO₂</div>
+                <div class="counter-card"><span id="water-count">8320000</span><br>gallons stormwater filtered</div>
+                <div class="counter-card"><span id="pollinators-count">1241887</span><br>pollinator visits</div>
+            </div>
+            <p class="update-timestamp">Updated daily · Data aggregated from customer dashboards</p>
+        </section>
+
+        <section class="personal-dashboard scroll-reveal">
+            <div class="container">
+                <h2>Your personal forest dashboard</h2>
+                <div class="demo-dashboard">
+                    <p><strong>Demo: Portland, OR – Pocket Kit (Mar 2024)</strong></p>
+                    <p>🌳 Survival: 14/15 (93%) · Canopy height: 6.2 ft · CO₂ this month: 4.8 lbs</p>
+                    <p>🦋 Biodiversity: 7 species observed (Anna’s hummingbird, western bumblebee)</p>
+                    <p>💧 Stormwater filtered this year: 210 gallons</p>
+                    <button class="btn btn-outline">Log in to see your forest →</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="leaderboard scroll-reveal">
+            <div class="container">
+                <h3>🏆 Top 5 micro‑forests by CO₂ (all time)</h3>
+                <ol>
+                    <li>Austin, TX – Corporate (2,000 sq ft) – 1,204 lbs</li>
+                    <li>Seattle, WA – Backyard Bank ×2 – 876 lbs</li>
+                    <li>Portland, OR – Backyard Bank – 602 lbs</li>
+                    <li>Boston, MA – Backyard Bank – 589 lbs</li>
+                    <li>Denver, CO – Corporate (1,200 sq ft) – 512 lbs</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="referral scroll-reveal">
+            <div class="container">
+                <h3>Multiply your impact</h3>
+                <p>Refer a friend → you get $20 credit, they get $10 off.<br>
+                Sponsor a community forest → donate $249, we plant a Pocket Kit at a local school.</p>
+                <a href="#" class="btn btn-primary">Refer now</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Verdant</h4><p>hello@verdant.com</p></div>
+            <div class="footer-col"><h4>Impact</h4><a href="impact.html">Dashboard</a></div>
+            <div class="footer-col"><h4>Learn</h4><a href="science.html">Science</a></div>
+        </div>
+        <div class="footer-bottom">© 2025 Verdant</div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+    <script>
+        // Simulate live counter animation
+        function animateCounter(element, start, end, duration) {
+            let range = end - start;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            let current = start;
+            let timer = setInterval(() => {
+                current += (range > 0 ? 1 : -1);
+                element.innerText = current.toLocaleString();
+                if (current == end) clearInterval(timer);
+            }, stepTime);
+        }
+        window.addEventListener('load', () => {
+            animateCounter(document.getElementById('forests-count'), 12000, 12487, 2000);
+            animateCounter(document.getElementById('co2-count'), 800, 892, 1500);
+            animateCounter(document.getElementById('water-count'), 8000000, 8320000, 2000);
+            animateCounter(document.getElementById('pollinators-count'), 1200000, 1241887, 2000);
+        });
+    </script>
+</body>
+</html>
