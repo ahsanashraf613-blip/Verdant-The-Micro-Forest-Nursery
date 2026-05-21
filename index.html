@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Verdant – Rewild Your Square Meter | Micro-Forest Kits</title>
+    <meta name="description" content="Plant a native micro-forest in your tiny yard. Miyawaki method kits grow 10x faster, need zero maintenance after 18 months. 12,000+ forests planted.">
+    <meta name="keywords" content="micro-forest, Miyawaki, native plants, carbon sequestration, urban gardening">
+    <meta name="author" content="Verdant">
+    <link rel="canonical" href="https://verdant.com/">
+    <meta property="og:title" content="Verdant – Rewild Your Square Meter">
+    <meta property="og:description" content="Turn your lawn into a carbon-sucking micro-forest. DIY kits for small spaces.">
+    <meta property="og:image" content="https://verdant.com/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom cursor (optional) -->
+    <div class="cursor"></div>
+
+    <header>
+        <nav>
+            <div class="logo">🌿 VERDANT</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" data-page="home" class="active">Home</a></li>
+                <li><a href="#" data-page="how-it-works">How It Works</a></li>
+                <li><a href="#" data-page="shop">Shop</a></li>
+                <li><a href="#" data-page="science">The Science</a></li>
+                <li><a href="#" data-page="impact">Impact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 3D Canvas Background -->
+        <canvas id="bg-canvas"></canvas>
+
+        <!-- PAGE: HOME (expanded) -->
+        <section id="page-home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Rewild your <span class="accent">square meter</span>.</h1>
+                    <p>Plant 15 native trees & shrubs in 30 sq ft – watch a complete ecosystem emerge in 18 months. No green thumb required.</p>
+                    <div class="hero-buttons">
+                        <a href="#" data-page="shop" class="btn btn-primary">Shop Kits →</a>
+                        <a href="#" data-page="how-it-works" class="btn btn-secondary">See How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div><span>12,487+</span> micro‑forests</div>
+                    <div><span>1.2M</span> pollinators</div>
+                    <div><span>★4.92</span> (1,247 reviews)</div>
+                </div>
+            </div>
+
+            <!-- New: Feature Grid -->
+            <section class="feature-grid scroll-reveal">
+                <div class="container">
+                    <h2>Why Verdant?</h2>
+                    <div class="grid-3">
+                        <div class="feature-card"><span class="emoji">⚡</span><h3>10x Faster</h3><p>Miyawaki method competition accelerates growth up to 10x vs single-tree planting.</p></div>
+                        <div class="feature-card"><span class="emoji">🦋</span><h3>30x Biodiversity</h3><p>Up to 30x more bird and insect species than a conventional lawn.</p></div>
+                        <div class="feature-card"><span class="emoji">💧</span><h3>Zero Irrigation</h3><p>After 18 months, deep roots make watering unnecessary except extreme drought.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Before/After Slider (new) -->
+            <section class="before-after scroll-reveal">
+                <div class="container">
+                    <h2>See the transformation</h2>
+                    <div class="comparison-slider" id="comparisonSlider">
+                        <div class="comparison-before">
+                            <img src="https://placehold.co/800x500/8B5A2B/white?text=BEFORE:+Lawn" alt="Before: lawn">
+                        </div>
+                        <div class="comparison-after">
+                            <img src="https://placehold.co/800x500/2E5C3E/white?text=AFTER:+Micro-Forest" alt="After: micro-forest">
+                        </div>
+                        <div class="comparison-handle" id="sliderHandle"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners Marquee -->
+            <section class="partners scroll-reveal">
+                <div class="container">
+                    <p>Trusted by</p>
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <span>🌿 Green Builder Magazine</span> <span>🌱 Treehugger</span> <span>🦋 NPR</span> <span>🏆 Yale Climate Connections</span> <span>🌎 Sunset Magazine</span>
+                            <span>🌿 Green Builder Magazine</span> <span>🌱 Treehugger</span> <span>🦋 NPR</span> <span>🏆 Yale Climate Connections</span> <span>🌎 Sunset Magazine</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="problem-solution scroll-reveal">
+                <div class="container">
+                    <div class="problem">
+                        <h2>Your lawn is a desert.</h2>
+                        <p>Lawns cover 40 million acres in the US, absorb near‑zero carbon, and require 10,000 gallons of water per year. Planting a single tree takes 20 years to matter.</p>
+                    </div>
+                    <div class="solution">
+                        <h2>The Miyawaki method</h2>
+                        <p>Ultra‑dense planting (3‑5 plants/m²) forces trees to grow 10x faster. Soil regenerates in 2 years, biodiversity explodes, and maintenance drops to zero after 18 months.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="best-sellers scroll-reveal">
+                <div class="container">
+                    <h2>Choose your forest size</h2>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-badge">Best Seller</div>
+                            <h3>Pocket Kit</h3>
+                            <p class="price">$249</p>
+                            <p>30 sq ft · 15 plants · 6 species<br>CO₂: 60 lbs/year</p>
+                            <a href="#" data-page="shop" class="btn btn-outline">Shop Pocket →</a>
+                        </div>
+                        <div class="product-card">
+                            <h3>Backyard Bank</h3>
+                            <p class="price">$699</p>
+                            <p>100 sq ft · 50 plants · 12 species<br>CO₂: 210 lbs/year</p>
+                            <a href="#" data-page="shop" class="btn btn-outline">Shop Backyard →</a>
+                        </div>
+                        <div class="product-card">
+                            <h3>Corporate Canopy</h3>
+                            <p class="price">$3,500+</p>
+                            <p>500+ sq ft · 250+ plants · custom audit<br>On‑site consult</p>
+                            <a href="#" data-page="shop" class="btn btn-outline">Request quote</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video embed section -->
+            <section class="video-section scroll-reveal">
+                <div class="container">
+                    <h2>Watch a micro-forest come to life</h2>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonial scroll-reveal">
+                <div class="container">
+                    <div class="quote">“I live in a row house with a concrete patio. The Pocket Kit turned it into a jungle in 14 months. 7 butterfly species. Best $249 I ever spent.”</div>
+                    <div class="author">— Sarah M., Baltimore <span class="verified">✓ Verified buyer</span></div>
+                </div>
+            </section>
+
+            <!-- Testimonial carousel (new) -->
+            <section class="testimonial-carousel scroll-reveal">
+                <div class="container">
+                    <h2>What our forest makers say</h2>
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">“My HOA was skeptical, but after 18 months they asked for three more kits.” – David, Austin</div>
+                            <div class="swiper-slide">“I’ve never gardened before. The AR app made it foolproof.” – Priya, Seattle</div>
+                            <div class="swiper-slide">“My 8-year-old now checks for monarchs every morning.” – James, Denver</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter scroll-reveal">
+                <div class="container">
+                    <h2>Free 25‑page Micro‑Forest Design Guide</h2>
+                    <p>Plus get 10% off your first kit when you subscribe.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Send me the guide →</button>
+                    </form>
+                    <small>We respect your inbox. Unsubscribe anytime.</small>
+                </div>
+            </section>
+        </section>
+
+        <!-- PAGE: HOW IT WORKS (expanded) -->
+        <section id="page-how-it-works" class="page">
+            <div class="page-hero">
+                <h1>Plant in an afternoon.<br>Thrives for decades.</h1>
+                <p>6 simple steps – or let our free AR app guide you.</p>
+            </div>
+
+            <div class="steps container">
+                <div class="step scroll-reveal"><div class="step-number">1</div><div class="step-content"><h3>Choose your kit & zone</h3><p>Select USDA hardiness zone – we curate native species for your area. No invasive ever.</p></div></div>
+                <div class="step scroll-reveal"><div class="step-number">2</div><div class="step-content"><h3>Receive your kit</h3><p>Box includes bare‑root plants, planting map, cardboard weed barrier, compressed leaf mulch, and QR code to AR app.</p></div></div>
+                <div class="step scroll-reveal"><div class="step-number">3</div><div class="step-content"><h3>Prepare the ground</h3><p>Lay cardboard, wet it. No tilling, no rototiller. Kills grass naturally.</p></div></div>
+                <div class="step scroll-reveal"><div class="step-number">4</div><div class="step-content"><h3>Arrange plants (AR or map)</h3><p>Point phone at ground – AR overlays exact spots. Or use 1:1 scale map. Dense random pattern (3-5 plants/m²).</p></div></div>
+                <div class="step scroll-reveal"><div class="step-number">5</div><div class="step-content"><h3>Plant & mulch</h3><p>Cut X in cardboard, dig small hole, insert plant, backfill with native soil, spread 4" mulch.</p></div></div>
+                <div class="step scroll-reveal"><div class="step-number">6</div><div class="step-content"><h3>Water-in & walk away</h3><p>Soak once. Water every 3-4 days for first 30 days if no rain. After that – zero watering (except extreme drought).</p></div></div>
+            </div>
+
+            <!-- Downloadable checklist -->
+            <section class="checklist-download scroll-reveal">
+                <div class="container">
+                    <h3>📋 Printable Planting Checklist</h3>
+                    <p>Get a one-page PDF to tick off each step.</p>
+                    <a href="#" class="btn btn-outline">Download Free →</a>
+                </div>
+            </section>
+
+            <section class="ar-promo scroll-reveal">
+                <div class="container">
+                    <h2>Free AR App – See your future forest</h2>
+                    <p>Point your phone at any spot and overlay a 3D model of your micro‑forest at 1, 5, or 10 years.</p>
+                    <div class="mockup-phone">📱 AR view – tap to try demo</div>
+                    <a href="#" class="btn btn-primary">Download on iOS</a> <a href="#" class="btn btn-secondary">Get it on Android</a>
+                </div>
+            </section>
+
+            <!-- FAQ Accordion (expanded) -->
+            <section class="faq-accordion scroll-reveal">
+                <div class="container">
+                    <h2>Frequently asked questions</h2>
+                    <div class="accordion-item"><button class="accordion-header">Can I plant on a slope?</button><div class="accordion-content"><p>Yes, use landscape pins (not included) to hold cardboard in place. Avoid slopes >20%.</p></div></div>
+                    <div class="accordion-item"><button class="accordion-header">What if a plant dies?</button><div class="accordion-content"><p>Add our 6-month survival guarantee at checkout – we replace up to 3 plants.</p></div></div>
+                    <div class="accordion-item"><button class="accordion-header">Do I need a permit?</button><div class="accordion-content"><p>No permit for private property in most US cities. Check HOA rules – we provide a template letter.</p></div></div>
+                    <div class="accordion-item"><button class="accordion-header">What about ticks?</button><div class="accordion-content"><p>Dense shrubbery can harbor small mammals, but our native species attract tick predators like opossums. We include a tick management guide.</p></div></div>
+                </div>
+            </section>
+        </section>
+
+        <!-- PAGE: SHOP (expanded with filters and more products) -->
+        <section id="page-shop" class="page">
+            <div class="page-hero">
+                <h1>Find your forest.</h1>
+                <p>Select size and USDA zone. We build a custom species mix.</p>
+            </div>
+
+            <div class="shop-controls container">
+                <div class="filter-group">
+                    <label>Filter by size:</label>
+                    <select id="sizeFilter">
+                        <option value="all">All</option><option value="pocket">Pocket (30 sq ft)</option><option value="backyard">Backyard (100 sq ft)</option><option value="corporate">Corporate (500+)</option>
+                    </select>
+                </div>
+                <div class="zone-selector">
+                    <label for="zone">USDA Zone:</label>
+                    <select id="zone">
+                        <option>Zone 3</option><option>Zone 4</option><option>Zone 5</option><option selected>Zone 6</option>
+                        <option>Zone 7</option><option>Zone 8</option><option>Zone 9</option><option>Zone 10</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-full-grid container scroll-reveal" id="productList">
+                <div class="product-full-card" data-size="pocket">
+                    <img src="https://placehold.co/400x300/2d5a3b/white?text=Pocket+Kit" alt="Pocket Kit" loading="lazy">
+                    <div class="product-details">
+                        <h2>Pocket Kit – Zone 6: Northeast Native</h2>
+                        <div class="price">$249</div>
+                        <div class="rating">★★★★★ 4.9 (312 reviews)</div>
+                        <ul><li>30 sq ft · 15 plants (6 species)</li><li>Red maple, serviceberry, winterberry, spicebush, ninebark, wild rose</li><li>CO₂: 60 lbs/year</li></ul>
+                        <div class="addons"><label><input type="checkbox"> Mycorrhizae booster (+$29)</label><label><input type="checkbox"> Survival guarantee (+$49)</label></div>
+                        <a href="#" class="btn btn-primary">Add to Cart – $249</a>
+                    </div>
+                </div>
+                <div class="product-full-card" data-size="backyard">
+                    <img src="https://placehold.co/400x300/2d5a3b/white?text=Backyard+Bank" alt="Backyard Bank">
+                    <div class="product-details">
+                        <h2>Backyard Bank – Zone 6</h2>
+                        <div class="price">$699</div>
+                        <div class="rating">★★★★★ 5.0 (89 reviews)</div>
+                        <ul><li>100 sq ft · 50 plants (12 species)</li><li>Includes 6‑month survival guarantee</li><li>CO₂: 210 lbs/year · Stormwater: 1,800 gal/year</li></ul>
+                        <a href="#" class="btn btn-primary">Add to Cart – $699</a>
+                    </div>
+                </div>
+                <div class="product-full-card" data-size="corporate">
+                    <img src="https://placehold.co/400x300/2d5a3b/white?text=Corporate+Canopy" alt="Corporate canopy">
+                    <div class="product-details">
+                        <h2>Corporate Canopy – Custom</h2>
+                        <div class="price">$3,500+</div>
+                        <ul><li>500+ sq ft · 250+ plants · On‑site consult</li><li>Custom species audit + annual reporting dashboard</li></ul>
+                        <a href="#" class="btn btn-secondary">Request a quote →</a>
+                    </div>
+                </div>
+                <!-- Additional product: Mini Meadow (add-on) -->
+                <div class="product-full-card" data-size="pocket">
+                    <img src="https://placehold.co/400x300/6B8E23/white?text=Mini+Meadow" alt="Mini Meadow add-on">
+                    <div class="product-details">
+                        <h2>Mini Meadow – Pollinator Patch</h2>
+                        <div class="price">$79</div>
+                        <ul><li>10 sq ft · 20 wildflowers</li><li>Attracts bees, butterflies, hummingbirds</li><li>Add to any kit</li></ul>
+                        <a href="#" class="btn btn-outline">Add to Cart →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription upsell -->
+            <section class="subscription-upsell scroll-reveal">
+                <div class="container">
+                    <h3>🌱 Subscribe & Save 10%</h3>
+                    <p>Get a Refill Pack every spring: 3 new plants + fresh mulch. $29/month for Pocket, $79/month for Backyard.</p>
+                    <a href="#" class="btn btn-primary">Start subscription →</a>
+                </div>
+            </section>
+
+            <section class="guarantee scroll-reveal">
+                <div class="container"><h3>🧾 89% survival rate · Free shipping over $499 · 30‑day refund on unopened kits</h3></div>
+            </section>
+        </section>
+
+        <!-- PAGE: SCIENCE (expanded with timeline and progress bars) -->
+        <section id="page-science" class="page">
+            <div class="page-hero">
+                <h1>The science of tiny, fast forests</h1>
+                <p>Three decades of research prove: ultra‑dense native planting restores ecosystems in 2 years, not 50.</p>
+            </div>
+
+            <!-- Interactive Timeline -->
+            <section class="timeline scroll-reveal">
+                <div class="container">
+                    <h2>History of the Miyawaki Method</h2>
+                    <div class="timeline-line">
+                        <div class="timeline-event"><span>1970s</span><p>Dr. Akira Miyawaki develops method in Japan</p></div>
+                        <div class="timeline-event"><span>1990s</span><p>First international projects in Brazil and Europe</p></div>
+                        <div class="timeline-event"><span>2015</span><p>First US pilot in California</p></div>
+                        <div class="timeline-event"><span>2024</span><p>Verdant launches first consumer kits</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="data-section container scroll-reveal">
+                <div class="data-card"><h3>📈 10x faster growth</h3><p>Schall et al. 2022: Dense planting (3 plants/m²) increases biomass accumulation 7.2x vs single-tree planting. Verdant pilots: 1.6m avg height in 18 months vs 0.2m for controls.</p><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+                <div class="data-card"><h3>🦋 30x more biodiversity</h3><p>Miyawaki 2004: After 10 years, Miyawaki forests support 30x more bird species than adjacent lawns. Our Portland pilot recorded 12 bird species in year 2.</p><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+                <div class="data-card"><h3>🌱 Soil carbon sequestration</h3><p>Lal 2018: Converting lawn to dense native planting increases soil organic carbon by 1.2 tons/ha/year. A 100 sq ft Verdant forest sequesters ~290 lbs CO₂ per year total.</p><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+            </div>
+
+            <section class="pilots container scroll-reveal">
+                <h2>Verdant internal pilot data (2023-2025)</h2>
+                <table><thead><tr><th>Location</th><th>Kit</th><th>Survival (18 mo)</th><th>Avg height</th><th>Bird species</th></tr></thead><tbody>
+                    <tr><td>Portland, OR</td><td>Backyard Bank</td><td>92%</td><td>7.2 ft</td><td>14</td></tr>
+                    <tr><td>Austin, TX</td><td>Pocket</td><td>85%</td><td>5.1 ft</td><td>9</td></tr>
+                    <tr><td>Boston, MA</td><td>Backyard Bank</td><td>89%</td><td>4.3 ft</td><td>7</td></tr>
+                </tbody>
+                <p class="small">Full dataset available for download – <a href="#">CSV</a></p>
+            </section>
+
+            <div class="calculator container scroll-reveal">
+                <h3>How much CO₂ will YOUR forest capture?</h3>
+                <input type="number" id="sqft" placeholder="Sq ft (e.g., 30)" value="100">
+                <select id="zone-calc"><option>Zone 6</option><option>Zone 8</option></select>
+                <button id="calc-btn" class="btn btn-primary">Calculate</button>
+                <p id="calc-result">~ 290 lbs CO₂ per year</p>
+            </div>
+
+            <section class="case-study container scroll-reveal">
+                <h2>Case study: Portland townhouse</h2>
+                <p>10×3 ft strip, Pocket Kit planted March 2024. After 18 months: 6 ft canopy, 14 of 15 plants alive, regular visits from hummingbirds and bumblebees. “My neighbor mows his lawn every Saturday. I sit in my hammock and watch butterflies.”</p>
+            </section>
+        </section>
+
+        <!-- PAGE: IMPACT (expanded with live map and growth chart) -->
+        <section id="page-impact" class="page">
+            <div class="page-hero">
+                <h1>Your impact. Measured.</h1>
+                <p>Every hour, these numbers grow.</p>
+            </div>
+
+            <div class="live-counters scroll-reveal container">
+                <div class="counter-grid">
+                    <div class="counter-card"><span id="forests-count">12487</span><br>micro‑forests planted</div>
+                    <div class="counter-card"><span id="co2-count">892.4</span><br>metric tons CO₂</div>
+                    <div class="counter-card"><span id="water-count">8320000</span><br>gallons stormwater filtered</div>
+                    <div class="counter-card"><span id="pollinators-count">1241887</span><br>pollinator visits</div>
+                </div>
+                <p class="update-timestamp">Updated daily · Data aggregated from customer dashboards</p>
+            </div>
+
+            <!-- Simulated interactive map -->
+            <section class="impact-map scroll-reveal">
+                <div class="container">
+                    <h2>Micro-forests across the US</h2>
+                    <canvas id="mapCanvas" width="800" height="400" style="width:100%; height:auto; background:#e9f5e9; border-radius:24px;"></canvas>
+                    <p class="small">Hover over dots to see details (simulated).</p>
+                </div>
+            </section>
+
+            <!-- Growth chart (simulated) -->
+            <section class="growth-chart scroll-reveal">
+                <div class="container">
+                    <h2>Weekly CO₂ sequestration (sample forest)</h2>
+                    <div class="chart-bars">
+                        <div style="height:30px"><span>Week 1</span><div class="bar" style="width:10%"></div></div>
+                        <div style="height:30px"><span>Week 4</span><div class="bar" style="width:25%"></div></div>
+                        <div style="height:30px"><span>Week 12</span><div class="bar" style="width:55%"></div></div>
+                        <div style="height:30px"><span>Week 26</span><div class="bar" style="width:80%"></div></div>
+                        <div style="height:30px"><span>Week 52</span><div class="bar" style="width:100%"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="personal-dashboard container scroll-reveal">
+                <h2>Your personal forest dashboard</h2>
+                <div class="demo-dashboard">
+                    <p><strong>Demo: Portland, OR – Pocket Kit (Mar 2024)</strong></p>
+                    <p>🌳 Survival: 14/15 (93%) · Canopy height: 6.2 ft · CO₂ this month: 4.8 lbs</p>
+                    <p>🦋 Biodiversity: 7 species observed (Anna’s hummingbird, western bumblebee)</p>
+                    <p>💧 Stormwater filtered this year: 210 gallons</p>
+                    <button class="btn btn-outline">Log in to see your forest →</button>
+                </div>
+            </div>
+
+            <div class="leaderboard container scroll-reveal">
+                <h3>🏆 Top 5 micro‑forests by CO₂ (all time)</h3>
+                <ol><li>Austin, TX – Corporate (2,000 sq ft) – 1,204 lbs</li><li>Seattle, WA – Backyard Bank ×2 – 876 lbs</li><li>Portland, OR – Backyard Bank – 602 lbs</li><li>Boston, MA – Backyard Bank – 589 lbs</li><li>Denver, CO – Corporate (1,200 sq ft) – 512 lbs</li></ol>
+            </div>
+
+            <div class="referral container scroll-reveal">
+                <h3>Multiply your impact</h3>
+                <p>Refer a friend → you get $20 credit, they get $10 off.<br>Sponsor a community forest → donate $249, we plant a Pocket Kit at a local school.</p>
+                <a href="#" class="btn btn-primary">Refer now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Verdant</h4><p>Rewild your square meter.<br>hello@verdant.com<br>(888) 888-1234</p></div>
+            <div class="footer-col"><h4>Shop</h4><a href="#" data-page="shop">All Kits</a><a href="#" data-page="shop">Pocket Kit</a><a href="#" data-page="shop">Backyard Bank</a><a href="#" data-page="shop">Corporate Canopy</a></div>
+            <div class="footer-col"><h4>Learn</h4><a href="#" data-page="how-it-works">How It Works</a><a href="#" data-page="science">The Science</a><a href="#" data-page="impact">Impact Dashboard</a></div>
+            <div class="footer-col"><h4>Support</h4><a href="#">Contact</a><a href="#">Shipping & Returns</a><a href="#">FAQs</a></div>
+        </div>
+        <div class="footer-bottom">© 2025 Verdant – A Public Benefit Corporation</div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
